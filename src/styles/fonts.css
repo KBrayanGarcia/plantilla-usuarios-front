@@ -1,0 +1,69 @@
+@font-face {
+    font-family: "Geomanist";
+    src: url("../assets/fonts/geomanist/Geomanist-Thin.otf") format("opentype");
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Geomanist";
+    src: url("../assets/fonts/geomanist/Geomanist-ExtraLight.otf") format("opentype");
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Geomanist";
+    src: url("../assets/fonts/geomanist/Geomanist-Light.otf") format("opentype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Geomanist";
+    src: url("../assets/fonts/geomanist/Geomanist-Book.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Geomanist";
+    src: url("../assets/fonts/geomanist/Geomanist-Regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Geomanist";
+    src: url("../assets/fonts/geomanist/Geomanist-Regular-Italic.otf") format("opentype");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Geomanist";
+    src: url("../assets/fonts/geomanist/Geomanist-Medium.otf") format("opentype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Geomanist";
+    src: url("../assets/fonts/geomanist/Geomanist-Bold.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Geomanist";
+    src: url("../assets/fonts/geomanist/Geomanist-Black.otf") format("opentype");
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Geomanist";
+    src: url("../assets/fonts/geomanist/Geomanist-Ultra.otf") format("opentype");
+    font-weight: 900;
+    font-style: normal;
+}

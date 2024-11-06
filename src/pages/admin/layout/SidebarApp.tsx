@@ -19,7 +19,7 @@ const SidebarApp = ({ collapsed, toggled, handleClickItem }: ISidebar) => {
                 color: palette.primary.contrastText,
                 borderRight: `1px solid ${palette.primary.main}`,
                 boxShadow: `0px 0px 10px 0px ${palette.secondary.main}`,
-                height: "100vh",
+                minHeight: "100%",
             }}
         >
             <Menu

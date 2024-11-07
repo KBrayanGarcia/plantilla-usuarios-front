@@ -1,1 +1,5 @@
 @import "./styles/fonts.css";
+*{
+    word-break: keep-all;
+    word-wrap: break-word;
+}

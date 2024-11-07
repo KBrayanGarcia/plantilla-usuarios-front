@@ -4,6 +4,7 @@ import { StyledDrawerAccesibility } from "../../../components/styles/StyledDrawe
 import { StyledButtonAccesibility } from "../../../components/styles/StyledButtonAccesibility";
 import useAccesibility from "../../../hooks/layout/useAccesibility";
 import ThemeSelector from "../../../components/ThemeSelector/ThemeSelector";
+import SetFontSize from "../../../components/fonts/SetFontSize";
 
 const DrawerAccesibility = () => {
     const { openDrawerAccesibility, setOpenDrawerAccesibility } = useAccesibility();
@@ -35,7 +36,12 @@ const DrawerAccesibility = () => {
                     </Typography>
                 </Box>
                 <Box>
+                    <Typography variant="h6">Tema Visual</Typography>
                     <ThemeSelector />
+                </Box>
+                <Box>
+                    <Typography variant="h6">Tamaño de la fuente</Typography>
+                    <SetFontSize />
                 </Box>
             </StyledDrawerAccesibility>
         </StyledButtonAccesibility>

@@ -2,9 +2,13 @@ import { createTheme, responsiveFontSizes } from "@mui/material";
 import { temas } from "./temas";
 import { temas_disponibles } from "../interfaces/temas.interface";
 
-export const crearTema = (tema: temas_disponibles) => {
+export const crearTema = (tema: temas_disponibles, fontSize: number) => {
     let theme = createTheme({
         ...temas[tema],
+        typography: {
+            fontFamily: "Geomanist, sans-serif",
+            fontSize,
+        }, 
         components: {
             MuiSlider: {
                 defaultProps: {

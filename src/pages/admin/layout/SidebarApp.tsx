@@ -1,12 +1,12 @@
-import { Sidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
+import { Sidebar, Menu } from "react-pro-sidebar";
 import { ISidebar } from "../../../interfaces/layout.interface";
-import HomeIcon from "@mui/icons-material/Home";
-import UserIcon from "@mui/icons-material/Person";
 import { useTheme } from "@mui/material";
-import { Settings } from "@mui/icons-material";
+import SidebarMenuItem from "../../../components/sidebar/SidebarMenuItem";
+import { sidebarRoutes } from "../../../router/config/sidebarRoutes";
 
 const SidebarApp = ({ collapsed, toggled, handleClickItem }: ISidebar) => {
     const { palette } = useTheme();
+
     return (
         <Sidebar
             collapsed={collapsed}
@@ -43,16 +43,15 @@ const SidebarApp = ({ collapsed, toggled, handleClickItem }: ISidebar) => {
                     },
                 }}
             >
-                <MenuItem onClick={handleClickItem} icon={<HomeIcon />}>
-                    Inicio
-                </MenuItem>
-                <MenuItem onClick={handleClickItem} icon={<UserIcon />}>
-                    Usuarios
-                </MenuItem>
-                <SubMenu label="Configuración" icon={<Settings />}>
-                    <MenuItem icon={<Settings />}> Configuración 1 </MenuItem>
-                    <MenuItem icon={<Settings />}> Configuración 2 </MenuItem>
-                </SubMenu>
+                {sidebarRoutes.map((route) => (
+                    <SidebarMenuItem
+                        key={route.to}
+                        icon={route.icon}
+                        title={route.title}
+                        to={route.to}
+                        onClick={handleClickItem}
+                    />
+                ))}
             </Menu>
         </Sidebar>
     );

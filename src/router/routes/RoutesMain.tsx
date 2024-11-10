@@ -4,6 +4,7 @@ import { Navigate, RouteObject } from "react-router-dom";
 import PageErrorApp from "../../pages/error/PageErrorApp";
 import routes_admin from "./RoutesAdmin";
 import { RUTAS_APP } from "../config/string_rutas";
+import Page404 from "../../pages/NotFound/Page404";
 
 const PageMain = lazy(() => import("../../pages/main/PageMain"));
 
@@ -20,6 +21,10 @@ const routes_main: RouteObject[] = [
             },
             ...routes_admin,
         ],
+    },
+    {
+        path: "*",
+        element: <Page404 />,
     },
 ];
 

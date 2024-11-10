@@ -1,10 +1,8 @@
-import { Box } from "@mui/material";
+import Grid from "@mui/material/Grid2";
 import SidebarApp from "./SidebarApp";
 import useSidebar from "../../../hooks/layout/useSidebar";
 import HeaderApp from "./HeaderApp";
-import { StyledAdminContainer } from "../../../components/styles/StyledAdminContainer";
-import { StyledAdminFooter } from "../../../components/styles/StyledAdminFooter";
-import { StyledAdminContent } from "../../../components/styles/StyledAdminContent";
+import { StyledBoxAdminContent } from "../../../components/styles/StyledBoxAdminContent";
 import FooterApp from "./FooterApp";
 import { Outlet } from "react-router-dom";
 
@@ -12,20 +10,24 @@ const PageAdminLayout = () => {
     const { collapsed, toggled, setShowSidebar, collapseDesktop } = useSidebar();
 
     return (
-        <Box display="flex">
+        <Grid container height={"100vh"}>
             <SidebarApp collapsed={collapsed} toggled={toggled} handleClickItem={collapseDesktop} />
-            <StyledAdminContainer>
-                <HeaderApp onClickMenu={setShowSidebar} />
-                <Box sx={{ overflowY: "auto" }}>
-                    <StyledAdminContent>
-                        <Outlet />
-                    </StyledAdminContent>
-                    <StyledAdminFooter>
+            <Grid size={"grow"} container direction={"column"} height={"100%"}>
+                <Grid>
+                    <HeaderApp onClickMenu={setShowSidebar} />
+                </Grid>
+                <Grid size={"grow"} container direction={"column"}>
+                    <Grid size={"grow"}>
+                        <StyledBoxAdminContent>
+                            <Outlet />
+                        </StyledBoxAdminContent>
+                    </Grid>
+                    <Grid>
                         <FooterApp />
-                    </StyledAdminFooter>
-                </Box>
-            </StyledAdminContainer>
-        </Box>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
     );
 };
 

@@ -1,21 +1,17 @@
 import { Typography, CircularProgress, Box } from "@mui/material";
-import { StyledBoxLoaderRoutesApp } from "../styles/StyledBoxLoaderRoutesApp";
 
 const LoaderRoutesApp = () => {
     return (
-        <StyledBoxLoaderRoutesApp>
-            <Box id="box-loader-routes-app">
+        <Box className="center-fullscreen">
+            <Box>
                 <Typography variant="h5" color="primary" fontWeight="bold">
                     Cargando aplicación...
                 </Typography>
-                <CircularProgress
-                    color="primary"
-                    size={25}
-                    thickness={2}
-                    sx={{ mt: 2 }}
-                />
+                <Box className="center-content">
+                    <CircularProgress color="primary" size={30} thickness={2} sx={{ mt: 2 }} />
+                </Box>
             </Box>
-        </StyledBoxLoaderRoutesApp>
+        </Box>
     );
 };
 

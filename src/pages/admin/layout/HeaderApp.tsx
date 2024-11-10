@@ -1,16 +1,15 @@
 import { IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { IHeader } from "../../../interfaces/layout.interface";
-import { StyledAdminHeader } from "../../../components/styles/StyledAdminHeader";
+import { StyledBoxAdminHeader } from "../../../components/styles/StyledBoxAdminHeader";
 
 const HeaderApp = ({ onClickMenu }: IHeader) => {
-
     return (
-        <StyledAdminHeader>
+        <StyledBoxAdminHeader>
             <IconButton title="Abrir menu lateral" onClick={onClickMenu} color="secondary" size="large">
                 <MenuIcon />
             </IconButton>
-        </StyledAdminHeader>
+        </StyledBoxAdminHeader>
     );
 };
 

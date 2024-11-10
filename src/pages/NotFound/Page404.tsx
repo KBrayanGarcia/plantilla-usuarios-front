@@ -1,13 +1,12 @@
-import { Typography } from "@mui/material";
-import { StyledBoxNotFound } from "../../components/styles/StyledBocNotFound";
+import { Box, Typography } from "@mui/material";
 
 const Page404 = () => {
     return (
-        <StyledBoxNotFound>
+        <Box className="center-fullscreen">
             <Typography variant="h4" color="primary" fontWeight="bold">
                 Página no encontrada
             </Typography>
-        </StyledBoxNotFound>
+        </Box>
     );
 };
 

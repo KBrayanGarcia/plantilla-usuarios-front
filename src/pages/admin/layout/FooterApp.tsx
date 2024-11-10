@@ -1,16 +1,15 @@
-import { Typography } from '@mui/material';
-import useAppInfoStore from '../../../store/app-info.store';
+import Copyright from "../../../components/footer/Copyright";
+import { StyledBoxAdminFooter } from "../../../components/styles/StyledBoxAdminFooter";
+import Grid from "@mui/material/Grid2";
+
 const FooterApp = () => {
-    const { date_client, version_app } = useAppInfoStore();
-
-
     return (
-        <div className="copyright">
-            <Typography variant="body2">
-                Todos los derechos reservados © {date_client.getFullYear()}. Versión <b>{version_app}</b>
-            </Typography>
-        </div>
-    )
-}
+        <StyledBoxAdminFooter>
+            <Grid container justifyContent={"center"} id="copyright">
+                <Copyright />
+            </Grid>
+        </StyledBoxAdminFooter>
+    );
+};
 
-export default FooterApp
+export default FooterApp;

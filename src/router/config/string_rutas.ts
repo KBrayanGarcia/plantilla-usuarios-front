@@ -3,4 +3,5 @@ export const RUTAS_APP = {
     INICIO: "inicio",
     ADMIN: "admin",
     USERS: "users",
+    LOGIN: "login",
 };

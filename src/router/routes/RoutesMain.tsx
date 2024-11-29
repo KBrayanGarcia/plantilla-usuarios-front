@@ -1,17 +1,17 @@
-/* eslint-disable react-refresh/only-export-components */
-import { lazy } from "react";
 import { Navigate, RouteObject } from "react-router-dom";
-import PageErrorApp from "../../pages/error/PageErrorApp";
-import routes_admin from "./RoutesAdmin";
 import { RUTAS_APP } from "../config/string_rutas";
+
+import PageErrorApp from "../../pages/error/PageErrorApp";
 import Page404 from "../../pages/NotFound/Page404";
 
-const PageMain = lazy(() => import("../../pages/main/PageMain"));
+import routes_login from "./RoutesLogin";
+import routes_admin from "./RoutesAdmin";
+import { lazyRoute } from "../../helpers/lazyRoute";
 
 const routes_main: RouteObject[] = [
     {
         path: "/",
-        element: <PageMain />,
+        lazy: lazyRoute(() => import("../../pages/main/PageMain"), "default"),
         errorElement: <PageErrorApp />,
         children: [
             {
@@ -19,6 +19,7 @@ const routes_main: RouteObject[] = [
                 index: true,
                 element: <Navigate to={RUTAS_APP.ADMIN} />,
             },
+            ...routes_login,
             ...routes_admin,
         ],
     },

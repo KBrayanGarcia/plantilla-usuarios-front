@@ -1,5 +1,7 @@
 {
     "name": "front",
+    "name_app": "Plantilla base de usuarios",
+    "name_app_short": "PBU",
     "private": true,
     "version": "0.1.0",
     "type": "module",
